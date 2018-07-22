@@ -9,21 +9,26 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white_full">
 
-        <TextView
+        <org.mmtextview.components.MMTextView
             android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
             android:text="[Tech Talk Vol.23] How Much Storage is Really Needed in A Smart Phone"
             android:layout_marginLeft="@dimen/margin_medium_2"
             android:layout_marginRight="@dimen/margin_medium_2"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
             />
         <ImageView
             android:id="@+id/iv_fee"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/image"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
             android:layout_below="@+id/tv_title"
             android:layout_marginLeft="@dimen/margin_medium_2"
             android:layout_marginRight="@dimen/margin_medium_2"
@@ -32,58 +37,76 @@
         <Button
             android:id="@+id/btn_vol"
             android:layout_width="60dp"
-            android:layout_height="30dp"
+            android:layout_height="20dp"
             android:text="Vol.23"
             android:textSize="10sp"
             android:layout_below="@+id/iv_fee"
             android:layout_alignTop="@+id/iv_fee"
-            android:layout_marginTop="130dp"
-            android:textColor="#FFFFFF"
+            android:layout_marginTop="140dp"
+            android:textColor="@color/primary_text"
             android:fontFamily="sans-serif"
             android:layout_marginLeft="@dimen/margin_xxlarge"
+            android:background="@color/white_full"
             />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/iv_fee">
+            android:layout_marginRight="@dimen/margin_card_medium_2"
+            android:layout_below="@+id/iv_fee"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium">
 
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pritty"/>
+                android:text="Pritty"
+                android:textColor="@color/primary_text"
+                android:textAlignment="center"
+                />
+
             <TextView
                 android:id="@+id/tv_name2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="jismarma"/>
+                android:text="jismarma"
+                android:textColor="@color/primary_text"
+                />
 
          <TextView
              android:id="@+id/tv_no"
              android:layout_width="0dp"
              android:layout_height="wrap_content"
              android:layout_weight="1"
-             android:drawableLeft="@drawable/ic_check_box_black_24dp"
-             android:text="jismarma"/>
+             android:drawableLeft="@drawable/icon_square"
+             android:text="5302"
+             android:textColor="@color/primary_text"
+             />
 
             <TextView
                 android:id="@+id/tv_cmt"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/ic_check_box_black_24dp"
-                android:text="jismarma"/>
+                android:drawableLeft="@drawable/icon_comment"
+                android:text="229"
+                android:textColor="@color/primary_text"
+                />
 
             <TextView
                 android:id="@+id/tv_like"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/ic_check_box_black_24dp"
-                android:text="jismarma"/>
+                android:drawableLeft="@drawable/icon_like98"
+                android:text="66"
+                android:textColor="@color/primary_text"
+                />
+
         </LinearLayout>
 
     </RelativeLayout>

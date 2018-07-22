@@ -14,18 +14,9 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="70dp"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay">
-
-            <!--<com.example.mma.mmhealthcare.components.LobsterRegularTextView
-                android:id="@+id/tv_screen_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/launcher_name"
-                android:textColor="@color/white_full"
-                android:textSize="@dimen/text_regular_3x"/>-->
 
            <LinearLayout
                 android:layout_width="match_parent"
@@ -34,11 +25,16 @@
                 android:layout_marginTop="@dimen/margin_medium">
 
                 <ImageView
+                    android:id="@+id/iv_user_profile"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_perm_identity_white_24dp"/>
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:src="@drawable/ic_perm_identity_white_24dp"
+                    />
+
                 <TextView
+                    android:id="@+id/tv_featured"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -46,7 +42,9 @@
                     android:textColor="#FFFFFF"
                     android:layout_marginTop="@dimen/margin_medium"
                     android:textSize="@dimen/text_regular"/>
+
                 <TextView
+                    android:id="@+id/tv_forum"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -54,7 +52,9 @@
                     android:text="Forum"
                     android:layout_marginTop="@dimen/margin_medium"
                     android:textSize="@dimen/text_regular"/>
+
                 <TextView
+                    android:id="@+id/tv_feedback"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -64,10 +64,12 @@
                     android:textSize="@dimen/text_regular"/>
 
                 <ImageView
+                    android:id="@+id/iv_check"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_perm_identity_white_24dp"/>
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:src="@drawable/calendar"/>
 
             </LinearLayout>
 
@@ -87,11 +89,6 @@
             android:layout_height="wrap_content">
 
         </com.example.mma.mmhealthcare.components.SmartRecyclerView>
-
-       <!-- <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvHealthCare"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />-->
 
         <include
             android:id="@+id/vpEmptyHealthCare"

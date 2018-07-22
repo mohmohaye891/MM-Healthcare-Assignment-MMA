@@ -1,8 +1,8 @@
 package com.example.mma.mmhealthcare.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.example.mma.mmhealthcare.R
 import com.example.mma.mmhealthcare.adapters.HealthCareAdapter
@@ -12,7 +12,6 @@ import com.example.mma.mmhealthcare.data.vos.HealthCareInfoVO
 import com.example.mma.mmhealthcare.delegates.HealthCareItemDelegate
 import com.example.mma.mmhealthcare.events.DataEvent
 import com.example.mma.mmhealthcare.events.ErrorEvent
-
 import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -34,13 +33,10 @@ class MainActivity : BaseActivity(), HealthCareItemDelegate {
         healthcare.title = "title"
         healthcare.shortDescription = "shortDescription"
         healthcare.publishedDate = "publishedDate"
-        healthcare.image = "Images"
+        healthcare.image = "Image"
 
         rvHealthCare.setEmptyView(vpEmptyHealthCare)
         rvHealthCare.layoutManager = LinearLayoutManager(applicationContext)
-
-       /* mHealthCareAdapter = HealthCareAdapter(applicationContext, this)
-        rvHealthCare.adapter = mHealthCareAdapter*/
 
         mSmartScrollListener = SmartScrollListener(object : SmartScrollListener.OnSmartScrollListener {
             override fun onListEndReach() {
@@ -59,13 +55,14 @@ class MainActivity : BaseActivity(), HealthCareItemDelegate {
 
         swipeRefreshLayout.setOnRefreshListener {
             val healthcareAdapterVal = mHealthCareAdapter
-            healthcareAdapterVal!!.clearData()
+           // healthcareAdapterVal!!.clearData()
             HealthCareAppModel.getInstance().forceLoadHealthCare()
         }
     }
 
     override fun onTapHealthCare(healthCare: HealthCareInfoVO?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val intent = Intent(applicationContext, HealthCareDetailActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onTapComment() {
